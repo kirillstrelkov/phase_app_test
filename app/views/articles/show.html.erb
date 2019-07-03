@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <div class='col-md-6'>
+      <div class='card'>
+        <div class="card-header">Language: English</div>
+        <div class="card-body">
+          <h5 class="card-title"><%= @article.question %></h5>
+          <p class="card-text"><%= @article.answer %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class='col-md-6'>
+      <div class='card'>
+        <div class="card-header">Language: German</div>
+        <div class="card-body">
+          <h5 class="card-title"><%= @translated_article[:question] %></h5>
+          <p class="card-text"><%= @translated_article[:answer] %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-light' %>
+  <%= link_to 'Back', articles_path, class: 'btn btn-light' %>
+
+</div>
+
